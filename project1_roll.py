@@ -30,7 +30,7 @@ def main():
                     if roll == 1:
                         print('You rolled a 1. Your turn is done!')
                         print()
-                        print('You total score is: {}'.format(playerScores[player_idx]))
+                        print('Your total score is: {}'.format(playerScores[player_idx]))
                         print()
                         break
                     else:
