@@ -29,10 +29,10 @@ def main():
     endTime = time.time()
     totlaTime = round(endTime - startTime, 2)
 
-    print('------------------------')
+    print('-------------------------')
     print('Well done, you have finished in: {}'.format(totlaTime))  
     print('You missed: {} times'.format(wrongAnswers)) 
-    print('------------------------') 
+    print('-------------------------') 
 
 def problemGenerator():
     left_Operand = random.randint(MIN_NUMBER, MAX_NUMBER)
