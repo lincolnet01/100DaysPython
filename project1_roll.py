@@ -4,7 +4,7 @@ def main():
 
     # Get the number of players
     while True:
-        print('Enter the number of players (2-4)')
+        print('Please enter the number of players (2-4)')
         numPlayer = input('> ')
         if numPlayer.isdigit() and 2 <= int(numPlayer) <= 4:
             numPlayer = int(numPlayer)
