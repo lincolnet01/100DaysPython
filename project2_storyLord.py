@@ -28,11 +28,11 @@ def main():
         story = story.replace(word, answers[word] )
 
     print()
-    print("======") 
+    print("=====") 
     print()
     print(story)
     print()
-    print('======')
+    print('=====')
 
 
 if __name__ == '__main__':
