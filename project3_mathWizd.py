@@ -1,4 +1,4 @@
-# Program that can generate math problems. 
+# A program that can generate math problems and challenge the user to solve them within a set time
 
 import random
 import time
