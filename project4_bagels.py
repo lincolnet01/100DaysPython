@@ -87,4 +87,18 @@ def getClues(guess, secretNum):
 if __name__ == '__main__':
     main()
 
+# Exploring the Program
+# Try to find the answers to the following questions. Experiment with some modifications to the code and rerun the program to see what effect the changes have.
+
+# What happens when you change the NUM_DIGITS constant?
+# What happens when you change the MAX_GUESSES constant?
+# What happens if you set NUM_DIGITS to a number larger than 10?
+# What happens if you replace secretNum = getSecretNum() on line 30 with secretNum = '123'?
+# What error message do you get if you delete or comment out numGuesses = 1 on line 34?
+# What happens if you delete or comment out random.shuffle(numbers) on line 62?
+# What happens if you delete or comment out if guess == secretNum: on line 74 and return 'You got it!' on line 75?
+# What happens if you comment out numGuesses += 1 on line 44?
+
+# More info on this program: https://inventwithpython.com/bigbookpython/project1.html
+
 
