@@ -3,26 +3,28 @@ import random
 NUM_DIGITS = 3
 MAX_GUESSES = 10
 
+
 def main():
     print('''=====================================================
 ===  Welcome to Bagels, a deductive logic game.   ===
 =====================================================
-          
+
  I am thinking of a {}-digit number with no repeated digits.
  You have {} guesses to guess what it is. Here are some clues:
-          
+
  When I say | It means
 ----------------------
  Pico       | One digit is correct but in the wrong position
  Fermi      | One digit is correct and in the right position.
  Bagels     | No digit is correct.
 ----------------------
-          
+
  For example, if the secret number was 248 and your guess was 843, the
  clues would be Fermi Pico.
-          
+
           '''.format(NUM_DIGITS, MAX_GUESSES))
-    while True: # Main game loop
+
+    while True:  # Main game loop
         secretNum = getSecretNum()
         input("Press <Enter> to start ")
         numGuesses = 1
@@ -39,12 +41,12 @@ def main():
                 break
             if numGuesses > MAX_GUESSES:
                 print('''
-                      
+
                 --------------------------------------------
                 Game over! You ran out of guesses!
                 The correct anser is", {}
                 --------------------------------------------
-                
+
                       '''.format(secretNum))
         print('Do you want to play again ? (yes or no)')
         if not input('> ').lower().startswith('y'):
@@ -61,6 +63,7 @@ def getSecretNum():
         secreNum += numbers[i]
     return secreNum
 
+
 def getClues(guess, secretNum):
     clues = []
     if guess == secretNum:
@@ -71,12 +74,12 @@ def getClues(guess, secretNum):
         --------------------------------------------
 
         '''
-    
+
     for i in range(len(guess)):
         if guess[i] == secretNum[i]:
             clues.append('Fermi')
         elif guess[i] in secretNum:
-                clues.append('Pico')
+            clues.append('Pico')
     if len(clues) == 0:
         return 'Bagels'
     else:
@@ -100,5 +103,3 @@ if __name__ == '__main__':
 # What happens if you comment out numGuesses += 1 on line 44?
 
 # More info on this program: https://inventwithpython.com/bigbookpython/project1.html
-
-
